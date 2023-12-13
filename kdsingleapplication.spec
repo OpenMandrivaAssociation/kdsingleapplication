@@ -60,7 +60,8 @@ Development files for libkdsingleapplication
 %{_libdir}/libkdsingleapplication-qt6.so.%{major}*
 
 %files -n %{develname}
+%doc %{_datadir}/doc/KDSingleApplication-qt6/
 %{_libdir}/libkdsingleapplication-qt6.so
 %{_libdir}/cmake/KDSingleApplication-qt6/
-#{_libdir}/qt6/mkspecs/modules/qt_KDSingleApplication.pri
+%{_prefix}/mkspecs/modules/qt_KDSingleApplication.pri
 %{_includedir}/kdsingleapplication-qt6/
