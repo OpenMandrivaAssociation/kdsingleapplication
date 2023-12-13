@@ -1,0 +1,42 @@
+From c49b0514738e0c1fef8ec60a706e4a1ee1284604 Mon Sep 17 00:00:00 2001
+From: Allen Winter <allen.winter@kdab.com>
+Date: Wed, 27 Sep 2023 15:33:05 -0400
+Subject: [PATCH] src/CMakeLists.txt - cmake-lint fixes
+
+---
+ src/CMakeLists.txt | 15 ++++++++++-----
+ 1 file changed, 10 insertions(+), 5 deletions(-)
+
+diff --git a/src/CMakeLists.txt b/src/CMakeLists.txt
+index b6e1da6..d588524 100644
+--- a/src/CMakeLists.txt
++++ b/src/CMakeLists.txt
+@@ -22,7 +22,9 @@ endif()
+ add_library(
+     KDAB::kdsingleapplication ALIAS kdsingleapplication
+ )
+-set_target_properties(kdsingleapplication PROPERTIES OUTPUT_NAME "kdsingleapplication${KDSingleApplication_LIBRARY_QTID}")
++set_target_properties(
++    kdsingleapplication PROPERTIES OUTPUT_NAME "kdsingleapplication${KDSingleApplication_LIBRARY_QTID}"
++)
+ 
+ target_include_directories(
+     kdsingleapplication
+@@ -57,10 +59,13 @@ if(${PROJECT_NAME}_IS_ROOT_PROJECT)
+         NAMESPACE KDAB::
+         DESTINATION ${INSTALL_LIBRARY_DIR}/cmake/KDSingleApplication${KDSingleApplication_LIBRARY_QTID}
+     )
+-    configure_file(KDSingleApplicationConfig.cmake.in KDSingleApplication${KDSingleApplication_LIBRARY_QTID}Config.cmake @ONLY)
+-    install(FILES "${CMAKE_CURRENT_BINARY_DIR}/KDSingleApplication${KDSingleApplication_LIBRARY_QTID}Config.cmake"
+-                  "${CMAKE_CURRENT_BINARY_DIR}/KDSingleApplication${KDSingleApplication_LIBRARY_QTID}ConfigVersion.cmake"
+-            DESTINATION "${INSTALL_LIBRARY_DIR}/cmake/KDSingleApplication${KDSingleApplication_LIBRARY_QTID}"
++    configure_file(
++        KDSingleApplicationConfig.cmake.in KDSingleApplication${KDSingleApplication_LIBRARY_QTID}Config.cmake @ONLY
++    )
++    install(
++        FILES "${CMAKE_CURRENT_BINARY_DIR}/KDSingleApplication${KDSingleApplication_LIBRARY_QTID}Config.cmake"
++              "${CMAKE_CURRENT_BINARY_DIR}/KDSingleApplication${KDSingleApplication_LIBRARY_QTID}ConfigVersion.cmake"
++        DESTINATION "${INSTALL_LIBRARY_DIR}/cmake/KDSingleApplication${KDSingleApplication_LIBRARY_QTID}"
+     )
+ 
+     include(ECMGenerateHeaders)
