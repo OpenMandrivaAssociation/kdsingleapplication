@@ -3,7 +3,7 @@
 %define develname %mklibname kdsingleapplication -d
 
 Name:           kdsingleapplication
-Version:        1.0.0
+Version:        1.1.0
 Release:        1
 Summary:        KDAB's helper class for single-instance policy applications Qt6
 Group:          System/Libraries/Qt
@@ -11,8 +11,6 @@ License:        MIT
 URL:            https://github.com/KDAB/KDSingleApplication
 Source0:        https://github.com/KDAB/KDSingleApplication/releases/download/v%{version}/%{name}-%{version}.tar.gz
 
-# Add patches from upstream
-Patch0:        https://github.com/KDAB/KDSingleApplication/commit/c49b0514738e0c1fef8ec60a706e4a1ee1284604.patch
 Patch1:        https://github.com/KDAB/KDSingleApplication/commit/250ab66f58aa37193f2e8b7814946e7a43d25cc7.patch
 
 BuildRequires: cmake
