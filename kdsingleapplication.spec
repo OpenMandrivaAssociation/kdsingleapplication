@@ -11,8 +11,6 @@ License:        MIT
 URL:            https://github.com/KDAB/KDSingleApplication
 Source0:        https://github.com/KDAB/KDSingleApplication/releases/download/v%{version}/%{name}-%{version}.tar.gz
 
-Patch1:        https://github.com/KDAB/KDSingleApplication/commit/250ab66f58aa37193f2e8b7814946e7a43d25cc7.patch
-
 BuildRequires: cmake
 BuildRequires: cmake(Qt6)
 BuildRequires: cmake(Qt6Core)
