@@ -4,7 +4,7 @@
 
 Name:           kdsingleapplication
 Version:        1.1.0
-Release:        1
+Release:        2
 Summary:        KDAB's helper class for single-instance policy applications Qt6
 Group:          System/Libraries/Qt
 License:        MIT
