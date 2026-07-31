@@ -3,7 +3,7 @@
 %define develname %mklibname kdsingleapplication -d
 
 Name:           kdsingleapplication
-Version:        1.2.0
+Version:        1.2.1
 Release:        1
 Summary:        KDAB's helper class for single-instance policy applications Qt6
 Group:          System/Libraries/Qt
@@ -38,7 +38,7 @@ Provides:       %{name}-devel = %{EVRD}
 Development files for libkdsingleapplication
 
 %prep
-%autosetup -p1 -n KDSingleApplication-%{version}
+%autosetup -p1 -n KDSingleApplication-1.2.1
 
 %build
 %cmake \
